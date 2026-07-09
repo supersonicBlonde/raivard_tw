@@ -1,0 +1,60 @@
+.wpcf7 .cf7-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-x-[40px] gap-y-[30px] mb-[30px];
+}
+
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"],
+.wpcf7 input[type="tel"],
+.wpcf7 input[type="date"],
+.wpcf7 input[type="number"],
+.wpcf7 textarea {
+    @apply text-[16px] font-Roboto font-normal text-[#636363] px-[29px] py-[16px] border border-[#D1D1D1]/5 w-full bg-[#1D1D1D];
+}
+
+.wpcf7-date::-webkit-calendar-picker-indicator {
+    @apply opacity-100 cursor-pointer [filter:invert(39%)_sepia(0%)_saturate(0%)_hue-rotate(180deg)_brightness(95%)_contrast(85%)];
+}
+
+.wpcf7 textarea {
+    @apply mb-[66px];
+    min-height: 140px;
+    resize: vertical;
+    margin-bottom: 1.5rem;
+}
+
+.cf7-contact-title {
+    @apply font-RalewayBold text-[22px] mb-[22px];
+}
+
+.wpcf7 .wpcf7-checkbox .wpcf7-list-item {
+    display: block;
+}
+
+.wpcf7 .wpcf7-checkbox .wpcf7-list-item label,
+.wpcf7 .wpcf7-checkbox .wpcf7-list-item {
+    color: #aaa;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.wpcf7 .wpcf7-checkbox input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    accent-color: #c8a96e;
+    padding: 0;
+}
+
+.wpcf7 input[type="submit"] {
+    @apply text-[#E6C07B] font-RalewaySemiBold text-[16px] border border-[#E6C07B]/20 rounded-sm uppercase px-[40px] py-[20px];
+    display: block;
+    margin: 2rem auto 0;
+    padding: 14px 40px;
+}
+
+.wpcf7 input[type="submit"]:hover {
+    background: #b8996e;
+}

@@ -1,0 +1,88 @@
+/**
+ * Custom `@font-face` rules
+ *
+ * These will be added immediately before Tailwind’s `base` layer.
+ */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300..7&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+  font-family: 'CatavaloThin';
+  src: url('fonts/Catavalo/Catavalo-Thin.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CatavaloRegular';
+  src: url('fonts/Catavalo/Catavalo-Regular.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CatavaloSemiBold';
+  src: url('fonts/Catavalo/Catavalo-SemiBold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CatavaloBold';
+  src: url('fonts/Catavalo/Catavalo-Bold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RalewayBold';
+  src: url('fonts/Raleway/Raleway-Bold.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RalewaySemiBold';
+  src: url('fonts/Raleway/Raleway-SemiBold.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RalewayRegular';
+  src: url('fonts/Raleway/Raleway-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RalewayMedium';
+  src: url('fonts/Raleway/Raleway-Medium.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RalewayLight';
+  src: url('fonts/Raleway/Raleway-Light.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RalewayExtraLight';
+  src: url('fonts/Raleway/Raleway-ExtraLight.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RalewayThin';
+  src: url('fonts/Raleway/Raleway-Thin.ttf') format('truetype');
+  font-display: swap;
+}
+
+
+
+
+
+/* @font-face {
+  font-family: 'FuturaRennerLight';
+  src: url('/fonts/FuturaRenner-Light.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MontreuxBranding-Bold';
+  src: url('/fonts/MontreuxBranding-Bold.ttf') format('truetype');
+  font-display: swap;
+} */

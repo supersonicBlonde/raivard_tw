@@ -1,0 +1,20 @@
+/**
+ * Custom styles to immediately follow Tailwind’s `utilities` layer
+ *
+ * Add your own utility classes to this theme. Complex utility classes should
+ * be added using Tailwind’s plugin system:
+ *
+ * https://tailwindcss.com/docs/adding-custom-styles#adding-custom-utilities
+ */
+
+.slide-pagination {
+   @apply bottom-[-2em] px-8;
+}
+
+.slide-page {
+   @apply rounded-none w-[18px] h-[5px] m-[4px] md:w-[45px] md:m-[8px];
+}
+
+.splide__pagination__page.is-active {
+   transform: none;
+}

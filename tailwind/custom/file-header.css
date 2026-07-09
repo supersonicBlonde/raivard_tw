@@ -1,0 +1,98 @@
+/*!
+Theme Name: raivard_tw
+Theme URI: https://raivard.com
+Description: A custom theme based on _tw
+Version: 0.1.0
+Author: Nina Presotto
+Author URI: https://ninapresotto.com
+Text Domain: raivard_tw
+Requires at least: 6.9
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: LICENSE
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+raivard_tw is based on _tw https://underscoretw.com/, (C) 2021-2026 Greg Sullivan
+_tw is distributed under the terms of the GNU GPL v2 or later.
+
+_tw is based on Underscores https://underscores.me/ and Varia https://github.com/Automattic/themes/tree/master/varia, (C) 2012-2026 Automattic, Inc.
+Underscores and Varia are distributed under the terms of the GNU GPL v2 or later.
+*/
+
+#primary-menu-mobile {
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 300ms ease, transform 300ms ease;
+}
+
+#primary-menu-mobile.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.menu-light {
+    @apply font-CatavaloThin uppercase inline-block text-primary;
+}
+
+.menu-bold {
+    @apply font-CatavaloBold uppercase inline-block text-tertiary;
+}
+
+.menu-item {
+    @apply relative;
+}
+
+.menu-item a {
+    @apply text-[12px];
+}
+
+.current_page_item {
+    @apply relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-secondary after:transition-all after:w-full;
+}
+
+.menu-item a:hover .menu-bold,
+.menu-item a:hover .menu-light {
+    @apply text-[#E6C07B];
+}
+
+#primary-menu-mobile li {
+    @apply text-center my-4;
+}
+
+#primary-menu-mobile .menu-bold,
+#primary-menu-mobile .menu-light {
+    font-size: 24px;
+}
+
+#primary-menu-mobile .current_page_item::after {
+    content: none;
+}
+
+@media(min-width:1200px) {
+    .menu-item a {
+        font-size: clamp(15px, 1.4vw, 24px);
+    }
+}
+
+.trp-shortcode-switcher__wrapper,
+.trp-language-switcher,
+.trp-current-language-item__wrapper,
+.trp-language-item {
+    display: flex;
+    align-items: center;
+}
+
+.trp-shortcode-switcher__wrapper {
+    padding-top: 0 !important;
+}
+
+.trp-language-item-name {
+    display: none !important;
+}
+
+/* .current_page_item a,
+.current_page_item a span {
+    @apply text-secondary;
+} */
