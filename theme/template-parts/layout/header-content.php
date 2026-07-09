@@ -9,13 +9,13 @@
  */
 
 ?>
-<header id="site-header" class="top-0 left-0 w-full z-50 bg-dark max-w-[1780px] mx-auto">
+<header id="site-header" class="sticky top-0 left-0 w-full z-50 bg-dark max-w-[1780px] mx-auto transition-all duration-300 ease-in-out">
 	<nav
 		aria-label="Global"
-		class="mx-auto flex items-center p-6 lg:px-12">
+		class="mx-auto flex items-center p-6 lg:px-12 transition-all duration-300 ease-in-out">
 		<div class="flex">
 			<a href="<?php echo esc_url(home_url('/')); ?>" class="-m-1.5 p-1.5" aria-label="Accueil - Michael Raivard">
-				<img src="<?php echo home_url('/wp-content/uploads/2026/06/logo_raivard_blanc.png') ?>" alt="Logo Raivard" height="104" width="260" class="w-[130px] h-auto lg:w-[260px]">
+				<img src="<?php echo home_url('/wp-content/uploads/2026/06/logo_raivard_blanc.png') ?>" alt="Logo Raivard" height="104" width="260" class="w-[130px] h-auto lg:w-[260px] transition-all duration-300 ease-in-out">
 			</a>
 		</div>
 

@@ -87,6 +87,18 @@ if (document.getElementById('slider1')) {
 
 
 document.addEventListener('DOMContentLoaded', function () {
+	// Sticky header: toggle is-scrolled class for the smooth shrink/blur animation
+	const siteHeader = document.getElementById('site-header');
+
+	if (siteHeader) {
+		const updateHeaderState = function () {
+			siteHeader.classList.toggle('is-scrolled', window.scrollY > 20);
+		};
+
+		updateHeaderState();
+		window.addEventListener('scroll', updateHeaderState, { passive: true });
+	}
+
 	// Mobile menu: add is-visible when dialog opens so CSS transition plays
 	const dialog = document.getElementById('mobile-menu');
 	const menu = document.getElementById('primary-menu-mobile');

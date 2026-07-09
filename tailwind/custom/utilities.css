@@ -18,3 +18,15 @@
 .splide__pagination__page.is-active {
    transform: none;
 }
+
+#site-header.is-scrolled {
+   @apply bg-dark/95 backdrop-blur-md shadow-lg shadow-black/40;
+}
+
+#site-header.is-scrolled nav {
+   @apply p-3 lg:px-8;
+}
+
+#site-header.is-scrolled nav img {
+   @apply w-[100px] lg:w-[180px];
+}
