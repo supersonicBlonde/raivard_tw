@@ -10,17 +10,17 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> class="mt-[220px]">
+<article id="post-<?php the_ID(); ?>" <?php post_class('mt-[230px]'); ?>>
 
 	<header class="entry-header px-8 md:max-w-[1229px] mx-auto">
 		<?php
 		$category = get_the_category();
 		if (! empty($category)) {
-			echo '<span class="entry-category font-RalewayBold text-[23px] tracking-[47%] uppercase text-[#E6C07BA1]">' . esc_html($category[0]->name) . '</span>';
+			echo '<span class="entry-category font-RalewayBold text-[16px] tracking-[47%] uppercase text-[#E6C07BA1]">' . esc_html($category[0]->name) . '</span>';
 		}
 		?>
 		<div class="flex items-center gap-4">
-			<?php the_title('<h1 class="mt-[30px] font-Cormorant font-semibold text-[90px] leading-none tracking-normal">', '</h1>'); ?>
+			<?php the_title('<h1 class="mt-[30px] font-Cormorant font-semibold text-[60px] leading-none tracking-normal">', '</h1>'); ?>
 		</div>
 
 		<div class="entry-meta-line flex items-center gap-4 my-[68px]">
@@ -30,11 +30,11 @@
 			$acf_cat   = get_field('category');
 
 			$parts = array_filter([
-				'<span class="inline-flex items-center gap-2"><svg class="shrink-0" width="29" height="33" viewBox="20 16 29 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28.6665 17.9165V23.7498" stroke="#E6C07B" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M40.3335 17.9165V23.7498" stroke="#E6C07B" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M44.7083 20.8335H24.2917C22.6808 20.8335 21.375 22.1393 21.375 23.7502V44.1668C21.375 45.7777 22.6808 47.0835 24.2917 47.0835H44.7083C46.3192 47.0835 47.625 45.7777 47.625 44.1668V23.7502C47.625 22.1393 46.3192 20.8335 44.7083 20.8335Z" stroke="#E6C07B" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21.375 29.5835H47.625" stroke="#E6C07B" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M28.6665 35.4165H28.6765" stroke="#E6C07B" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M34.5 35.4165H34.51" stroke="#E6C07B" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M40.3335 35.4165H40.3435" stroke="#E6C07B" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M28.6665 41.25H28.6765" stroke="#E6C07B" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M34.5 41.25H34.51" stroke="#E6C07B" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M40.3335 41.25H40.3435" stroke="#E6C07B" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="font-RalewaySemiBold text-[20px] tracking-[10px] uppercase text-[#FFFFFFB2]">' . esc_html($date_text) . '</span></span>',
-				$location ? '<span class="inline-flex items-center gap-2"><svg class="shrink-0" width="25" height="31" viewBox="4 1 25 31" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.3264 29.9736C19.8839 27.7654 27.5 20.6154 27.5 13.75C27.5 10.8326 26.3411 8.03472 24.2782 5.97182C22.2153 3.90893 19.4174 2.75 16.5 2.75C13.5826 2.75 10.7847 3.90893 8.72182 5.97182C6.65893 8.03472 5.5 10.8326 5.5 13.75C5.5 20.6154 13.1161 27.7654 15.6736 29.9736C15.9119 30.1528 16.2019 30.2497 16.5 30.2497C16.7981 30.2497 17.0881 30.1528 17.3264 29.9736Z" stroke="#E6C07B" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.5 17.875C18.7782 17.875 20.625 16.0282 20.625 13.75C20.625 11.4718 18.7782 9.625 16.5 9.625C14.2218 9.625 12.375 11.4718 12.375 13.75C12.375 16.0282 14.2218 17.875 16.5 17.875Z" stroke="#E6C07B" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="font-RalewaySemiBold text-[20px] tracking-[10px] uppercase text-[#FFFFFFB2]">' . esc_html($location) . '</span></span>' : '',
-				$acf_cat  ? '<span class="inline-flex items-center gap-2"><svg class="shrink-0" width="33" height="31" viewBox="1 1 33 31" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.0417 14.5835L20.4167 18.9585" stroke="#E6C07B" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.47917 30.6248C10.4887 30.6248 11.4755 30.3255 12.3149 29.7646C13.1543 29.2038 13.8085 28.4066 14.1948 27.474C14.5811 26.5413 14.6822 25.515 14.4853 24.5249C14.2883 23.5348 13.8022 22.6253 13.0884 21.9115C12.3745 21.1977 11.4651 20.7115 10.4749 20.5146C9.48484 20.3176 8.45856 20.4187 7.52589 20.805C6.59323 21.1914 5.79607 21.8456 5.23521 22.685C4.67436 23.5243 4.37501 24.5112 4.37501 25.5207C4.37528 26.4913 4.00612 27.4257 3.34251 28.134C3.13803 28.338 2.99871 28.5981 2.94223 28.8813C2.88574 29.1645 2.91463 29.4581 3.02522 29.7249C3.13581 29.9917 3.22313 30.2197 3.56343 30.3799C3.80374 30.5401 4.0862 30.6254 4.37501 30.6248H9.47917Z" stroke="#E6C07B" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.5381 24.8368L31.1762 8.2016C31.7567 7.62106 32.0829 6.83366 32.0829 6.01265C32.0829 5.19163 31.7567 4.40424 31.1762 3.82369C30.5956 3.24314 29.8083 2.91699 28.9872 2.91699C28.1662 2.91699 27.3788 3.24314 26.7983 3.82369L10.1602 20.4618" stroke="#E6C07B" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="font-RalewaySemiBold text-[20px] tracking-[10px] uppercase text-[#FFFFFFB2]">' . esc_html($acf_cat) . '</span></span>' : '',
+				'<span class="inline-flex items-center"><svg class="shrink-0 mr-[20px]" width="29" height="33" viewBox="20 16 29 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28.6665 17.9165V23.7498" stroke="#E6C07B" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M40.3335 17.9165V23.7498" stroke="#E6C07B" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M44.7083 20.8335H24.2917C22.6808 20.8335 21.375 22.1393 21.375 23.7502V44.1668C21.375 45.7777 22.6808 47.0835 24.2917 47.0835H44.7083C46.3192 47.0835 47.625 45.7777 47.625 44.1668V23.7502C47.625 22.1393 46.3192 20.8335 44.7083 20.8335Z" stroke="#E6C07B" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21.375 29.5835H47.625" stroke="#E6C07B" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M28.6665 35.4165H28.6765" stroke="#E6C07B" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M34.5 35.4165H34.51" stroke="#E6C07B" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M40.3335 35.4165H40.3435" stroke="#E6C07B" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M28.6665 41.25H28.6765" stroke="#E6C07B" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M34.5 41.25H34.51" stroke="#E6C07B" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M40.3335 41.25H40.3435" stroke="#E6C07B" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="font-RalewaySemiBold text-[16px] tracking-[10px] uppercase text-[#FFFFFFB2]">' . esc_html($date_text) . '</span></span>',
+				$location ? '<span class="inline-flex items-center"><svg class="shrink-0 mr-[20px]" width="25" height="31" viewBox="4 1 25 31" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.3264 29.9736C19.8839 27.7654 27.5 20.6154 27.5 13.75C27.5 10.8326 26.3411 8.03472 24.2782 5.97182C22.2153 3.90893 19.4174 2.75 16.5 2.75C13.5826 2.75 10.7847 3.90893 8.72182 5.97182C6.65893 8.03472 5.5 10.8326 5.5 13.75C5.5 20.6154 13.1161 27.7654 15.6736 29.9736C15.9119 30.1528 16.2019 30.2497 16.5 30.2497C16.7981 30.2497 17.0881 30.1528 17.3264 29.9736Z" stroke="#E6C07B" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.5 17.875C18.7782 17.875 20.625 16.0282 20.625 13.75C20.625 11.4718 18.7782 9.625 16.5 9.625C14.2218 9.625 12.375 11.4718 12.375 13.75C12.375 16.0282 14.2218 17.875 16.5 17.875Z" stroke="#E6C07B" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="font-RalewaySemiBold text-[16px] tracking-[10px] uppercase text-[#FFFFFFB2]">' . esc_html($location) . '</span></span>' : '',
+				$acf_cat  ? '<span class="inline-flex items-center"><svg class="shrink-0 mr-[20px]" width="33" height="31" viewBox="1 1 33 31" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.0417 14.5835L20.4167 18.9585" stroke="#E6C07B" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.47917 30.6248C10.4887 30.6248 11.4755 30.3255 12.3149 29.7646C13.1543 29.2038 13.8085 28.4066 14.1948 27.474C14.5811 26.5413 14.6822 25.515 14.4853 24.5249C14.2883 23.5348 13.8022 22.6253 13.0884 21.9115C12.3745 21.1977 11.4651 20.7115 10.4749 20.5146C9.48484 20.3176 8.45856 20.4187 7.52589 20.805C6.59323 21.1914 5.79607 21.8456 5.23521 22.685C4.67436 23.5243 4.37501 24.5112 4.37501 25.5207C4.37528 26.4913 4.00612 27.4257 3.34251 28.134C3.13803 28.338 2.99871 28.5981 2.94223 28.8813C2.88574 29.1645 2.91463 29.4581 3.02522 29.7249C3.13581 29.9917 3.22313 30.2197 3.56343 30.3799C3.80374 30.5401 4.0862 30.6254 4.37501 30.6248H9.47917Z" stroke="#E6C07B" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.5381 24.8368L31.1762 8.2016C31.7567 7.62106 32.0829 6.83366 32.0829 6.01265C32.0829 5.19163 31.7567 4.40424 31.1762 3.82369C30.5956 3.24314 29.8083 2.91699 28.9872 2.91699C28.1662 2.91699 27.3788 3.24314 26.7983 3.82369L10.1602 20.4618" stroke="#E6C07B" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="font-RalewaySemiBold text-[16px] tracking-[10px] uppercase text-[#FFFFFFB2]">' . esc_html($acf_cat) . '</span></span>' : '',
 			]);
-			echo '<span class="inline-flex items-center">' . implode('<span class="mx-2">|</span>', $parts) . '</span>';
+			echo '<span class="inline-flex items-center gap-[50px]">' . implode('<span>|</span>', $parts) . '</span>';
 			?>
 		</div>
 	</header><!-- .entry-header -->
@@ -45,8 +45,9 @@
 				<?php echo wp_kses_post($texte_1); ?>
 			</div>
 		<?php endif; ?>
-
-		<div class="mt-[68px] mb-[130px]">
+	</section>
+	<section class="px-8 md:max-w-[1359px] mx-auto my-[130px]">
+		<div class="">
 			<?php
 			$media = get_field('media_group');
 			if (!empty($media)) :
@@ -68,15 +69,18 @@
 			<?php endif;
 			endif; ?>
 		</div>
+	</section>
+	<section class="px-8 md:max-w-[1229px] mx-auto my-[130px]">
 		<?php $texte_2 = get_field('texte_2');
 		if ($texte_2) : ?>
 			<div class="font-RalewayRegular font-normal text-[20px] leading-[45px] tracking-[0.1em] text-[#FFFFFF8A]">
 				<?php echo wp_kses_post($texte_2); ?>
 			</div>
 		<?php endif; ?>
-
+	</section>
+	<section class="px-8 md:max-w-[1359px] mx-auto my-[130px]">
 		<?php if (have_rows('deux_colonnes')) : ?>
-			<div class="grid grid-cols-2 gap-16 mt-[120px]">
+			<div class="grid grid-cols-2 gap-16">
 				<?php while (have_rows('deux_colonnes')) : the_row();
 					$image = get_sub_field('image');
 					$texte = get_sub_field('texte');
@@ -92,9 +96,11 @@
 				<?php endwhile; ?>
 			</div>
 		<?php endif; ?>
+	</section>
+	<section class="px-8 md:max-w-[1229px] mx-auto my-[130px]">
 		<?php $texte_3 = get_field('texte_3');
 		if ($texte_3) : ?>
-			<div class="font-RalewayRegular font-normal text-[20px] leading-[45px] tracking-[0.1em] text-[#FFFFFF8A] mt-[80px]">
+			<div class="font-RalewayRegular font-normal text-[20px] leading-[45px] tracking-[0.1em] text-[#FFFFFF8A]">
 				<?php echo wp_kses_post($texte_3); ?>
 			</div>
 		<?php endif; ?>

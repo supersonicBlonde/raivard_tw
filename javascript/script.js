@@ -11,6 +11,7 @@
 
 // Default theme
 import Splide from '@splidejs/splide';
+import { initScrollToTop } from './scroll-to-top.js';
 
 document.addEventListener('DOMContentLoaded', function () {
 	const loadMoreButton = document.getElementById('load-more-actus');
@@ -98,6 +99,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		updateHeaderState();
 		window.addEventListener('scroll', updateHeaderState, { passive: true });
 	}
+
+	initScrollToTop();
 
 	// Mobile menu: add is-visible when dialog opens so CSS transition plays
 	const dialog = document.getElementById('mobile-menu');

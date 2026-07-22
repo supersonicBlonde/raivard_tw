@@ -51,7 +51,7 @@ endif;
         <?php
         if ($section1['paragraph_1']):
         ?>
-            <div class="font-RalewayRegular text-lg mb-6 tracking-wide md:leading-[30px] md:leading-[35px] text-[#D9D9D9]">
+            <div class="font-RalewayRegular text-lg mb-6 tracking-wide md:leading-[30px] md:leading-[35px] text-[#D9D9D9CC]">
                 <?php echo $section1['paragraph_1']; ?>
             </div>
         <?php
